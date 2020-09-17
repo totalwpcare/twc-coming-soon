@@ -1,0 +1,253 @@
+*{
+	margin:0;
+	padding:0;
+	outline:0;
+}
+
+html{
+	font-size:100%;
+}	
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
+	color:#fff;
+	font-size:16px;
+	line-height:1.1;
+	background-color:#fff;
+}
+
+p{
+	font-size:14px;
+	line-height:1.75;
+	color:#dadada;
+	margin-bottom:24px;
+}
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+ul li{
+	list-style:none;
+	font-style:normal;
+}
+
+.main-wrapper{
+	overflow:hidden;
+}
+
+.main-sec{
+	padding:60px 0;
+}
+
+.main-bg-image{	
+	 background-image:url(../img/coming-soon-theme-twc-2020-bg-2.jpg); 
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	width:100%;
+	height:100vh;
+	overflow:hidden;
+	position:relative;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:991px){
+	.main-bg-image{
+		min-height:100vh;
+	overflow-y:auto;
+	}
+}
+
+/* .main-bg-image-overlay{
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.2);
+	z-index:-1;
+} */
+
+.logo{
+	text-align:center;
+}
+
+.main-sec .details .heading{
+	font-family: 'Verdana' !important;
+	font-size:80px;
+	font-weight:500;
+	color:#fff;
+	text-align:center;
+}
+
+.main-sec .details .slogan{
+	font-family: 'Verdana' !important;
+	font-size:20px;
+	line-height:36px;
+	letter-spacing:.5px;
+	color:#fff;
+	text-align:center;
+	padding:24px 0px 10px 0;
+	margin-bottom:0;
+}
+
+.main-sec .details .counter-sec{
+	padding-top:30px;
+}
+
+.main-sec .details .counter-sec .counter{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.main-sec .details .counter-sec .counter .count{
+	padding:0px 62px 0px;
+	text-align:center;
+	border-left:1px dotted #dadada;
+	border-color:rgba(218,218,218,0.8);
+	box-sizing:border-box;
+}
+
+.main-sec .details .counter-sec .counter .count:first-child{
+	border-left:0;
+}
+
+.main-sec .details .counter-sec .counter .count h1{
+	font-size:80px;
+	font-weight:500;
+	line-height:84px;
+	color:#fff;
+	margin-bottom:0px;
+}
+
+.main-sec .details .counter-sec .counter .count p{
+	font-size:18px;
+	color:#fff;
+	text-align:center;
+	margin-bottom:0;
+}
+
+.main-sec .details .contact{
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+.main-sec .details .contact ul{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.main-sec .details .contact ul li{
+	font-family: 'Verdana' !important;
+	font-size:21px;
+	line-height:54px;
+	color:#fff;
+	padding-right:15px;
+	padding-left:15px;
+	list-style:none;
+}
+
+.main-sec .details .contact ul li i{
+	color:#fff;
+	padding-right:10px;
+}
+
+.main-sec .details .socials-icons{
+	margin-top:10px;
+}
+
+.main-sec .details .socials-icons ul{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.main-sec .details .socials-icons ul li a{
+	font-size:20px;
+	color:#fff;
+	padding:20px;	
+	display:block;
+}
+.address{
+    font-family: 'Verdana' !important;
+    font-size: 21px;
+    line-height: 30px;
+    color: #fff;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    width: 65%;
+    margin: 0 auto;
+}
+@media (max-width:991px){
+	.address{
+		width:80%;
+	}
+}
+@media (max-width:767px){
+	.address{
+		width:90%;
+	}
+}
+@media(max-width:991px) and (min-width:768px){	
+.main-sec .details .counter-sec .counter .count{
+	padding:10px 50px 10px;
+}
+
+}
+
+@media(max-width:767px){	
+.main-sec{
+	padding:100px 0;
+}
+
+.main-sec .details .heading{
+	font-size:45px;
+}
+
+.main-sec .details .slogan{
+	line-height:30px;
+	padding:50px 0px 0px 0px;
+}
+
+.main-sec .details .counter-sec{
+	padding-top:50px;
+}
+
+.main-sec .details .counter-sec .counter .count{
+	padding:5px 20px 5px;
+}
+
+.main-sec .details .counter-sec .counter .count h1{
+	font-size:40px;
+	line-height:normal;
+}
+
+.main-sec .details .contact{
+	padding:50px 0px 0px 0px;
+}
+
+.main-sec .details .contact ul{
+	display:block;
+	text-align:center;
+}
+
+.main-sec .details .contact ul li{
+	line-height:normal;
+	margin-bottom:16px;
+}
+
+.main-sec .details .counter-sec .counter .count p{
+	font-size:12px;
+}
+	
+}
