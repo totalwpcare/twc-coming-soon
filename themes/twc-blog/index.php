@@ -14,7 +14,7 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
 <!-- Animate Min CSS -->
 <link rel="stylesheet" href="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/assets/css/animate.min.css">
 <!-- FontAwesome Min CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/assets/css/fontawesome.min.css"/>
 <!-- Style Min CSS -->
 <link rel="stylesheet" href="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/themes/<?php echo $theme_slug ?>/assets/css/style.css">
 <!-- Responsive CSS -->
@@ -101,8 +101,7 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
         </section>
         <!-- End Coming Soon Area -->
         
-        <!-- jQuery Min JS -->
-        <script src="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/assets/js/jquery.min.js"></script>
+        <?php wp_footer(); ?>
         <!-- Popper Min JS -->
         <script src="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/assets/js/popper.min.js"></script>
         <!-- Bootstrap Min JS -->
@@ -127,10 +126,10 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
             if (hours < "10") { hours = "0" + hours; }
             if (minutes < "10") { minutes = "0" + minutes; }
             if (seconds < "10") { seconds = "0" + seconds; }
-            $("#days").html(days + "<span>Days</span>");
-            $("#hours").html(hours + "<span>Hours</span>");
-            $("#minutes").html(minutes + "<span>Minutes</span>");
-            $("#seconds").html(seconds + "<span>Seconds</span>");
+            jQuery("#days").html(days + "<span>Days</span>");
+            jQuery("#hours").html(hours + "<span>Hours</span>");
+            jQuery("#minutes").html(minutes + "<span>Minutes</span>");
+            jQuery("#seconds").html(seconds + "<span>Seconds</span>");
         }
         setInterval(function() { makeTimer(); }, 1000);
 

@@ -20,13 +20,14 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
     <!-- Animate Min CSS -->
     <link rel="stylesheet" href="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/assets/css/animate.min.css">
     <!-- FontAwesome Min CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/assets/css/fontawesome.min.css"/>
     <!-- Style Min CSS -->
     <link rel="stylesheet" href="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/themes/<?php echo $theme_slug ?>/assets/css/style.css">
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/themes/<?php echo $theme_slug ?>/assets/css/responsive.css">
 </head>
 <body>
+    <?php /* 
 <!-- <div class="size1 bg0 where1-parent">
 	<?php if($totalwpcare_maintenance_countdown == 1) { ?>
 		<div class="flex-c-m bg-img1 size2 where1 overlay1 where2 respon2" style="background-image: url('<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/themes/<?php echo $theme_slug ?>/images/bg01.jpg');">
@@ -110,6 +111,7 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
 			</div>
 		</div>
 	</div> -->
+    */ ?>
 
 	<!-- Preloader -->
 	<div class="preloader">
@@ -152,8 +154,8 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="main-banner-content">
-                            <h1><span>We are</span> coming soon</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida maecenas accumsan.</p>
+                            <h1><?php echo get_option('totalwpcare_maintenance_headline') ?></h1>
+                            <p><?php echo get_option('totalwpcare_maintenance_description') ?></p>
                             <?php if($totalwpcare_maintenance_countdown == 1) { ?>
                                     <div id="timer">
                                         <div id="days"></div>
@@ -182,7 +184,7 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
                 <div class="about-area">
                     <div class="title">
                         <h2>About Us</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis suspendisse ultrices gravida. Risus commodo viverra. Quis suspendisse ultrices gravida.</p>
+                        <p><?php echo get_option('totalwpcare_maintenance_description') ?></p>
                     </div>
                 </div>
 
@@ -237,8 +239,7 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
         </div>
         <!-- End Sidebar Modal -->
 
-    <!-- jQuery Min JS -->
-		<script src="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/assets/js/jquery.min.js"></script>
+        <?php wp_footer(); ?>
         <!-- Popper Min JS -->
         <script src="<?php echo TOTALWPCARE_CS_PLUGIN_URL ?>/assets/js/popper.min.js"></script>
         <!-- Bootstrap Min JS -->
@@ -262,10 +263,10 @@ $totalwpcare_maintenance_contact_no = get_option('totalwpcare_maintenance_contac
             if (hours < "10") { hours = "0" + hours; }
             if (minutes < "10") { minutes = "0" + minutes; }
             if (seconds < "10") { seconds = "0" + seconds; }
-            $("#days").html(days + "<span>Days</span>");
-            $("#hours").html(hours + "<span>Hours</span>");
-            $("#minutes").html(minutes + "<span>Minutes</span>");
-            $("#seconds").html(seconds + "<span>Seconds</span>");
+            jQuery("#days").html(days + "<span>Days</span>");
+            jQuery("#hours").html(hours + "<span>Hours</span>");
+            jQuery("#minutes").html(minutes + "<span>Minutes</span>");
+            jQuery("#seconds").html(seconds + "<span>Seconds</span>");
         }
         setInterval(function() { makeTimer(); }, 300);
         </script>

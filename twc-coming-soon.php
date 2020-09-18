@@ -19,6 +19,11 @@ function TotalWPCare_CS_installer(){
 }
 register_activation_hook( __file__, 'TotalWPCare_CS_installer' );
 
+function TotalWPCare_CS_scripts() {
+    wp_enqueue_script('jquery');
+}
+add_action('wp_footer', 'TotalWPCare_CS_scripts');
+
 if ( ! class_exists( 'TotalWPCare_CS_coming_soon' ) ) :
 class TotalWPCare_CS_coming_soon {
   /**
